@@ -13,7 +13,10 @@ unalias 9
 # OPAM configuration
 . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-alias acme='9 acme -af /mnt/font/Monaco/14a/font'
+export PLAN9=/usr/local/Cellar/plan9port/20140306/libexec
+
 alias vi="$(which nvim)"
 
 export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/bin
+export PATH=$PATH:$PLAN9/bin
