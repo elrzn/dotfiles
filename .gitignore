@@ -4,3 +4,7 @@
 !bin/
 !.zshrc
 !.spacemacs
+
+!.config/
+.config/*
+!.config/nvim
