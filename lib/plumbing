@@ -1,0 +1,56 @@
+# to update: cat $HOME/lib/plumbing | 9 9p write plumb/rules
+
+editor = acme
+
+# Gitfiles {
+kind is text
+data matches '[a-zA-Z0-9_\-./~{}@]+('$addr')?'
+data matches '((/[a-zA-Z0-9_\-./]+)@[a-zA-Z0-9_\-./~{}@]+)('$addr')?'
+data set       $1
+arg isdir      $2
+attr add       addr=$4
+plumb to gitfileedit
+plumb client Gitfiles
+	
+type is text
+data matches '[a-zA-Z¡-�0-9_\-./]+'
+data matches '([0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f][0-9a-f])[0-9a-f]*'
+plumb start rc -c 'cd '''$wdir'''; root=`{git rev-parse --show-toplevel}; rev='''$1'''; {gitfileshow $rev} >[2=1] | nobs | plumb -i -d edit -a ''action=showdata filename=''$root/+$rev'
+# }
+
+# Ocaml error messages {
+type is text
+data matches 'File "([.a-zA-Z¡-<U+FFFF>0-9_/\-]*[a-zA-Z¡-<U+FFFF>0-9_/\-])", line ([0-9]+)?'
+arg isfile      $1
+data set        $file
+attr add        addr=$2
+plumb to edit
+plumb client $editor
+
+type is text
+data matches 'File "([.a-zA-Z¡-<U+FFFF>0-9_/\-]*[a-zA-Z¡-<U+FFFF>0-9_/\-])", line ([0-9]+), characters ([0-9]+)-([0-9]+):'
+arg isfile      $1
+data set        $file
+attr add        addr=$2-#0+#$3,$2-#0+#$4
+plumb to edit
+plumb client $editor
+# }
+
+# Github {
+type is text
+data matches 'GH/([a-zA-z0-9]+)/([a-zA-Z0-9_\-]+)/([0-9a-f]+)'
+plumb to web
+plumb start web http://github.com/$1/$2/commit/$3
+
+type is text
+data matches 'GH/([a-zA-z0-9]+)/([a-zA-Z0-9_\-]+)#([0-9]+)'
+plumb to web
+plumb start web http://github.com/$1/$2/issues/$3
+
+type is text
+data matches 'GH/([a-zA-z0-9]+)/([a-zA-Z0-9_\-]+)'
+plumb to web
+plumb start web http://github.com/$1/$2
+# }
+
+include basic

@@ -1,0 +1,14 @@
+#!/usr/bin/env rc
+
+TERM=dumb
+plumber
+
+fn cd { builtin cd $1 && awd $sysname }
+tabstop=4
+
+font='/mnt/font/Hack Regular/12a/font'
+
+lfont='/mnt/font/Source Code Pro/12a/font'
+
+SHELL=rc
+exec acme -a -f $font -F $lfont $*
