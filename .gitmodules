@@ -1,3 +1,0 @@
-[submodule ".config/nvim/bundle/vim-go"]
-	path = .config/nvim/bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
