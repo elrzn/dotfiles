@@ -12,7 +12,7 @@ if [ "$(pgrep plumber)" ]; then
 else
 	echo starting plumber
 	plumber
-  cat $HOME/lib/plumbing | 9p write plumb/rules
+	cat $HOME/lib/plumbing | 9p write plumb/rules
 fi
 
 acme -a -f /mnt/font/Monaco/14a/font $1
