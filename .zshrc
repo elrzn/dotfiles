@@ -6,23 +6,28 @@ plugins=(git brew cpanm docker osx perl tig)
 
 source $HOME/.profile
 source $ZSH/oh-my-zsh.sh
-source $HOME/perl5/perlbrew/etc/bashrc
 
 unalias 9
 
-# OPAM configuration
+export PATH=$PATH:$HOME/bin
+
+alias vi="$(which nvim)"
+
+# Perl
+if [ -x "$(command -v perlbrew)" ]; then
+    source $HOME/perl5/perlbrew/etc/bashrc
+fi
+
+# OCaml
 . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
-# Configure plan9port.
+# plan9port
 export PLAN9_BASE_PATH=/usr/local/Cellar/plan9port
 export PLAN9_VERSION=$(ls $PLAN9_BASE_PATH)
 export PLAN9=$PLAN9_BASE_PATH/$PLAN9_VERSION/libexec
 export PATH=$PATH:$PLAN9/bin
 
-alias vi="$(which nvim)"
-
-# Configure go.
+# Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-export PATH=$PATH:$HOME/bin
