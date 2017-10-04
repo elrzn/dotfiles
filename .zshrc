@@ -23,8 +23,7 @@ fi
 
 # plan9port
 export PLAN9_BASE_PATH=/usr/local/Cellar/plan9port
-export PLAN9_VERSION=$(ls $PLAN9_BASE_PATH)
-export PLAN9=$PLAN9_BASE_PATH/$PLAN9_VERSION/libexec
+export PLAN9=$PLAN9_BASE_PATH/$(ls $PLAN9_BASE_PATH)/libexec
 export PATH=$PATH:$PLAN9/bin
 
 # Go
