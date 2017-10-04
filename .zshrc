@@ -21,5 +21,8 @@ export PATH=$PATH:$PLAN9/bin
 
 alias vi="$(which nvim)"
 
-export PATH=$PATH:$HOME/go/bin
+# Configure go.
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+
 export PATH=$PATH:$HOME/bin
