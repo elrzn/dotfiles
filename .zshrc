@@ -19,7 +19,7 @@ function _update_ocaml() {
 
 # Perl
 if [ -x "$(command -v perlbrew)" ]; then
-    source $HOME/perl5/perlbrew/etc/bashrc
+	source $HOME/perl5/perlbrew/etc/bashrc
 fi
 
 function _update_homebrew() {
