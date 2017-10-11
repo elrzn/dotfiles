@@ -4,6 +4,7 @@
 !bin/
 !.zshrc
 !.spacemacs
+!.perltidyrc
 
 !.config/
 .config/*
