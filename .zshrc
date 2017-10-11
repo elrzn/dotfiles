@@ -28,6 +28,7 @@ function _update_homebrew() {
 		brew upgrade
 		brew cleanup
 		brew cask cleanup
+		brew services cleanup
 	fi
 }
 
