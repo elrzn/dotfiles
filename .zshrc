@@ -33,7 +33,7 @@ function _update_homebrew() {
 }
 
 function _update_javascript() {
-	if [ -x "$(command -v brew)" ]; then
+	if [ -x "$(command -v yarn)" ]; then
 		yarn global upgrade
 	fi
 }
