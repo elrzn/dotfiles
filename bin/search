@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+if [ ! "$(which ag)" ]; then
+	echo 'Command not found.'
+	exit 1
+fi
+
+ag --nocolor --noheading "$@"
+
+if [ $? -ne 0 ]; then
+	echo 'No results.'
+fi
