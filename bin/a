@@ -16,4 +16,5 @@ else
 	cat $HOME/lib/plumbing | 9p write plumb/rules
 fi
 
-acme -a -f /mnt/font/Monaco/14a/font $1
+font_size=12
+acme -a -f /mnt/font/Monaco/${font_size}a/font $1
