@@ -44,11 +44,25 @@ function _update_ruby() {
 	fi
 }
 
+function _update_rust() {
+	if [ -x "$(command -v cargo)" ]; then
+		cargo install-update -a
+	fi
+}
+
+function _update_go() {
+	if [ -x "$(command -v go)" ]; then
+		cat $HOME/go_packages | xargs go get
+	fi
+}
+
 function _update() {
 	_update_homebrew
 	_update_ocaml
 	_update_javascript
 	_update_ruby
+	_update_rust
+	_update_go
 }
 
 # Translate from English to German.
