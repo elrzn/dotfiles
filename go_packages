@@ -6,3 +6,4 @@ golang.org/x/tools/cmd/goimports
 github.com/s-urbaniak/agoc
 github.com/eaburns/Watch
 github.com/eaburns/Fmt
+9fans.net/go/acme/acmego
