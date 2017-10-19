@@ -9,3 +9,5 @@
 !.config/
 .config/*
 !.config/nvim
+
+!*terminal
