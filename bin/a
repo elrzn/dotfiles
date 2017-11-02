@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 export SHELL="$PLAN9/bin/rc"
 export acmeshell="$PLAN9/bin/rc"
