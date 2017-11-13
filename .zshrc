@@ -13,7 +13,7 @@ source $ZSH/oh-my-zsh.sh
 function _update_ocaml() {
 	if [ -x "$(command -v opam)" ]; then
 		opam update
-		opam upgrade
+		opam upgrade -y
 	fi
 }
 
