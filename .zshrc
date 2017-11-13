@@ -2,7 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="lambda"
 
-plugins=(git brew docker osx tig ansible vagrant cpanm)
+plugins=(git brew docker osx tig vagrant cpanm perl golang)
 
 source $HOME/.profile
 source $ZSH/oh-my-zsh.sh
