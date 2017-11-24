@@ -2,10 +2,11 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="lambda"
 
-plugins=(git brew docker osx tig vagrant cpanm perl golang)
+plugins=(brew cpanm docker git golang osx perl tig vagrant)
 
 source $HOME/.profile
 source $ZSH/oh-my-zsh.sh
+test -f $HOME/.work && source $HOME/.work
 
 # OCaml.
 . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
