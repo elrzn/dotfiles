@@ -17,3 +17,6 @@ export PATH=$PATH:$HOME/.cargo/bin
 # Haskell / Stack / Carp.
 export CARP_DIR=$DEV/Carp
 export PATH=$PATH:$HOME/.local/bin:
+
+# Klong.
+export KLONGPATH=$DEV/klong/lib
