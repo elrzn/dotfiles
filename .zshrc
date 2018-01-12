@@ -41,7 +41,7 @@ function _update_javascript() {
 
 function _update_ruby() {
 	if [ -x "$(command -v gem)" ]; then
-		sudo gem update
+		gem update
 	fi
 }
 
@@ -61,7 +61,7 @@ function _update() {
 	_update_homebrew
 	_update_ocaml
 	_update_javascript
-#	_update_ruby
+	_update_ruby
 	_update_rust
 	_update_go
 }
