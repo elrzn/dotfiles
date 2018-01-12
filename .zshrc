@@ -46,7 +46,7 @@ function _update_ruby() {
 }
 
 function _update_rust() {
-	if [ -x "$(command -v rustup") ]; then
+	if [ -x "$(command -v rustup)" ]; then
 		rustup update stable
 	fi
 	if [ -x "$(command -v cargo)" ]; then
