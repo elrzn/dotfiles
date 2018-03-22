@@ -4,7 +4,7 @@ export SHELL="$PLAN9/bin/rc"
 export acmeshell="$PLAN9/bin/rc"
 # export BROWSER=firefox
 # export BROWSER=google-chrome
-export BROWSER='safari'
+export BROWSER=safari
 export tabstop=3
 export TERM=dumb
 
@@ -20,5 +20,8 @@ else
 	cat $HOME/lib/plumbing | 9p write plumb/rules
 fi
 
+# font=GoMono
+# font=Menlo-Regular
+font=Monaco
 font_size=12
-acme -a -f /mnt/font/Monaco/${font_size}a/font $1
+acme -a -f /mnt/font/${font}/${font_size}a/font $1
