@@ -20,3 +20,6 @@ export PATH=$PATH:$HOME/.local/bin:
 
 # Klong.
 export KLONGPATH=$DEV/klong/lib
+
+# Common Lisp.
+export PATH=$PATH:$HOME/.roswell/bin
