@@ -7,6 +7,7 @@ export acmeshell="$PLAN9/bin/rc"
 export BROWSER=safari
 export tabstop=3
 export TERM=dumb
+export NO_COLOR="NOPE"
 
 # Get rid of backspace characters in Unix man output.
 export PAGER=nobs
