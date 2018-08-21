@@ -8,6 +8,9 @@ source $HOME/.profile
 source $ZSH/oh-my-zsh.sh
 test -f $HOME/.work && source $HOME/.work
 
+# ATS
+export PATSHOME=$HOME/Development/ATS2-Postiats-0.3.11
+
 # OCaml.
 . $HOME/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
