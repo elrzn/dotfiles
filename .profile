@@ -23,3 +23,6 @@ export KLONGPATH=$DEV/klong/lib
 
 # Common Lisp.
 export PATH=$PATH:$HOME/.roswell/bin
+
+# ATS.
+export PATSHOME=$HOME/Development/ATS2-Postiats-0.3.11
