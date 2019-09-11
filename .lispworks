@@ -1,5 +1,6 @@
 (in-package "CL-USER")
 
+#-:LISPWORKS-PERSONAL-EDITION
 (load-all-patches)
 
 #-quicklisp
