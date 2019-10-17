@@ -3,6 +3,8 @@
 #-:LISPWORKS-PERSONAL-EDITION
 (load-all-patches)
 
+(pushnew :asdf-unicode *features*)
+
 #-quicklisp
 (let ((quicklisp-init (merge-pathnames "quicklisp/setup.lisp"
                                        (user-homedir-pathname))))
